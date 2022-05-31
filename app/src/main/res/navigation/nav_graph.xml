@@ -13,9 +13,16 @@
         <action
             android:id="@+id/action_homeFragment_to_pictureFragment"
             app:destination="@id/pictureFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_transformationFragment"
+            app:destination="@id/transformationFragment" />
     </fragment>
     <fragment
         android:id="@+id/pictureFragment"
         android:name="com.sanjayprajapat.glidecacheapp.PicturesFragment"
         android:label="PicturesFragment" />
+    <fragment
+        android:id="@+id/transformationFragment"
+        android:name="com.sanjayprajapat.glidecacheapp.TransformationFragment"
+        android:label="TransformationFragment" />
 </navigation>

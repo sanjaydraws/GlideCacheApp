@@ -25,7 +25,7 @@ import com.bumptech.glide.request.transition.Transition
  * */
 
 /**
- * show placeholder when error or image load failed
+ * show placeholder when error or image loading failed
  *
  * */
 fun getRequestOption(): RequestOptions {
@@ -58,13 +58,16 @@ fun getBlurRequestOption():RequestOptions =
 
 @BindingAdapter("loadImage")
 fun ImageView.loadImage(imageUrl: Any?){
+    val requestOptions = RequestOptions()
+    requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL)
     imageUrl?.let {
-        Glide.with(this).applyDefaultRequestOptions(getBlurRequestOption())
+        Glide.with(this)
         .load(imageUrl).
-        centerCrop().diskCacheStrategy(DiskCacheStrategy.ALL).
+        centerCrop().
         placeholder(R.drawable.ic_launcher_background)
-         .transition(withCrossFade(factory)).
-        into(this)
+         .transition(withCrossFade(factory))
+            .apply (requestOptions)
+         .into(this)
     }
 }
 
@@ -105,3 +108,4 @@ fun ImageView.loadAsGif(imageUrl: Any?){
         .load(imageUrl)
         .into(this)
 }
+

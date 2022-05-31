@@ -36,6 +36,9 @@ class HomeFragment : Fragment() {
         binding?.pictures?.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_pictureFragment)
         }
+        binding?.transformation?.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_transformationFragment)
+        }
     }
 
     companion object {
