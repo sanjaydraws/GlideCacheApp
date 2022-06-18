@@ -54,9 +54,12 @@ class TransformationFragment : Fragment() {
 
     fun getTypes():MutableList<Type>{
         val l = mutableListOf(
-            Mask, NinePatchMask, RoundedCorners, CropTop, CropCenter, CropBottom, CropSquare, CropCircle,
-            CropCircleWithBorder, Grayscale, BlurLight, BlurDeep, Toon, Sepia, Contrast, Invert,
-            Pixel, Sketch, Swirl, Brightness, Kuawahara, Vignette
+            Mask, NinePatchMask,
+//            RoundedCorners,
+            CropTop, CropCenter, CropBottom, CropSquare,
+//            CropCircle,
+//            CropCircleWithBorder, Grayscale, BlurLight, BlurDeep, Toon, Sepia, Contrast, Invert,
+//            Pixel, Sketch, Swirl, Brightness, Kuawahara, Vignette
         )
         return  l
     }
